@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -12,7 +13,15 @@ android {
         targetSdkVersion(28)
         versionCode = 1
         versionName = "1.0"
-        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        isEnabled = true
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
     }
 }
 
@@ -22,8 +31,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:1.1.3")
     implementation("androidx.core:core-ktx:1.0.1")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-livedata:2..0.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel:2..0.0")
+    implementation("androidx.lifecycle:lifecycle-extensions:2.0.0")
+    kapt("androidx.databinding:databinding-compiler:3.4.0")
 
     // Google Material
     implementation("com.google.android.material:material:1.0.0")
