@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Android WorkDev Talk</string>
+    <string name="contacts_list">Contacts List</string>
+    <string name="contact_registration">Contact Registration</string>
+    <string name="email">E-mail</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="save">Save</string>
 </resources>

@@ -1,8 +1,8 @@
 package io.github.wellingtoncosta.androidworkdevtalk.domain
 
 data class Contact(
-    val id: Long?,
-    val name: String,
-    val email: String,
-    val phone: String
+    var id: Long?,
+    var name: String,
+    var email: String,
+    var phone: String
 )
